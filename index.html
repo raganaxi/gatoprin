@@ -3,16 +3,21 @@
 <head>
 	<meta charset="UTF-8">
 	<title>Document</title>
-	<link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/bulma/0.7.1/css/bulma.css">
+	<link href="https://fonts.googleapis.com/css?family=Open+Sans:300,400,600,700" rel="stylesheet">
+	<link rel="stylesheet" href="css/normalize.css">
+	<link rel="stylesheet" href="css/bulma.css">
+	<link rel="stylesheet" href="css/animate.css">
+	<link rel="stylesheet" href="css/style.css">
+
 </head>
-<body>
-	<section id="top" style="background: blue">
+<body class="gatoprin">
+	<section id="top" >
 	<nav>
 		<div class="container">
 			<nav class="navbar" role="navigation" aria-label="main navigation">
 				<div class="navbar-brand">
-					<a class="navbar-item" href="https://bulma.io">
-						<img src="https://bulma.io/images/bulma-logo.png" alt="Bulma: a modern CSS framework based on Flexbox" width="112" height="28">
+					<a class="navbar-item" href="#top" alt="Inicio">
+						<img src="assets/img/logo.png" width="240" height="49" alt="Logo gatoprin">
 					</a>
 
 					<a role="button" class="navbar-burger" aria-label="menu" aria-expanded="false">
@@ -23,29 +28,34 @@
 				</div>
 				<div id="navMenuDocumentation" class="navbar-menu">
 					<div class="navbar-end">
-						<a class="navbar-item bd-navbar-item-documentation  is-active" href="/documentation">
+						<a class="navbar-item font-primary semibold sz15 color-primary hov-secondary" href="#services">
 							<span class="is-hidden-touch is-hidden-widescreen">
-								Docs
+								SERVICIOS
 							</span>
 							<span class="is-hidden-desktop-only">
-								Servicios
+								SERVICIOS
 							</span>
+							<span class="line-hover"></span>
 						</a>
 
 
-						<a class="navbar-item bd-navbar-item-videos " href="https://bulma.io/videos/">
-							
+						<a class="navbar-item font-primary semibold sz15 color-primary hov-secondary" href="#">
+							<span class="is-hidden-touch is-hidden-widescreen">
+								EMPRESA
+							</span>
 
-							<span>Empresa</span>
+							<span class="is-hidden-desktop-only">EMPRESA</span>
 						</a>
 
-						<a class="navbar-item bd-navbar-item-blog " href="https://bulma.io/blog/">
-
-							<span>Contacto</span>
+						<a class="navbar-item font-primary semibold sz15 color-primary hov-secondary" href="#contacto">
+							<span class="is-hidden-touch is-hidden-widescreen">
+								CONTACTO
+							</span>
+							<span class="is-hidden-desktop-only">CONTACTO</span>
 						</a>
 
-						<a class="navbar-item bd-navbar-item-expo " href="https://bulma.io/expo/">
-							whats
+						<a class="navbar-item ws-logo-link" href="https://api.whatsapp.com/send?phone=528712199612" alt="WhatsApp (871) 219 9612" target="_blank">
+							<img src="assets/img/ws.png" width="31" height="31" alt="link a whats app">
 						</a>
 					</div>
 				</div>
@@ -53,24 +63,65 @@
 		</div>
 	</nav>
 	<div>
-		<h1><span>Hola, bienvenido</span></h1>
+		<div class="h100"></div>
+		<h1 class="animated fadeInUp has-text-centered"><span class="sz35 has-text-weight-bold is-centered color-primary">¡Hola, bienvenido!</span></h1>
 		<div class="h50"></div>
-		<p class="description">
-			Lorem ipsum dolor sit amet, consectetur adipisicing elit. Repudiandae magni quis temporibus saepe illo, veniam, sint ut voluptatem natus eaque, nesciunt iusto porro accusamus! Et quia itaque praesentium quasi cumque?
+		<p class="animated description fadeInUp sz18 has-text-weight-semibold color-primary has-text-centered">
+			Somos una empresa con más de 20 años de experiencia
+			<br>
+			en la impresión y producción gráfica de alta calidad.
+			<br>
+			Conoce nuestros servicios...
 		</p>
 		<div class="h50"></div>
-		<div class="arrow-down">down</div>
-		<div class="cat-print-1">cat</div>
+		<div class="has-text-centered">
+			<a class="arrow-scroll-dawn" href="#services"
+			   alt="Ir Abajo" target="_blank">
+				<img src="assets/img/scroll.png" width="35" height="41" alt="arrows down">
+			</a>
+		</div>
+		<div class="cat-print-1 has-text-centered"><img src="assets/img/cat.png" width="610" height="398" alt="gato gatoprin"></div>
 	</div>
 	</section>
 	<section id="services" style="background: white">
-		<h2><span>experiencia y calidad en cada servicio</span></h2>
-		<div class="servicios">
-			
+		<div class="container">
+			<div class="h130"></div>
+			<h2 class="has-text-centered"><span class="has-text-black has-text-weight-bold sz35">Experiencia y calidad en cada servicio</span></h2>
+			<div class="h100"></div>
+			<div class="servicios">
+
+
+			</div>
+			<div class="h130"></div>
 		</div>
-		
 	</section>
-	
-	
+<section id="works">
+	<div class="container">
+		<h2><span class="has-text-weight-bold sz35 has-text-black">¡Calidad de la buena!</span></h2>
+		<div class="h25"></div>
+		<h3><span class="has-text-black has-text-weight-semibold sz18">Cuidado y limpieza en cada proyecto.</span></h3>
+		<div id="work-bg">
+			<img src="assets/img/work-bg.png" alt="nuestros trabajos">
+		</div>
+		<div class="h130"></div>
+		<div class="h130"></div>
+	</div>
+
+</section>
+<section id="empresa">
+	<div class="container">
+		<h2><span>Comprometidos contigo</span></h2>
+		<div><p>
+			Somos una empresa enfocada en satisfacer las necesidades de nuestros clientes.
+			<br>
+			Cuidamos cada detalle y brindamos la mayor eficacia en cada proyecto.
+		</p>
+			Servicio
+			Calidad
+		Puntualidad
+			¡Comenzemos un nuevo proyecto!
+	</div>
+</section>
+
 </body>
 </html>

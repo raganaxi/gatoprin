@@ -1,0 +1,98 @@
+body,html {
+    font-family: 'Open Sans', sans-serif;
+    font-size: 14px;
+    line-height: inherit;
+}
+.gatoprin .navbar-item img{
+    max-height: 49px;
+}
+nav.navbar{
+    background: transparent;
+    color: #fff;
+    font-size: 15px;
+    text-transform: uppercase;
+    font-family: 'Open Sans', sans-serif;
+}
+
+.cat-print-1 {
+    margin-bottom:  -98px;
+}
+
+
+
+
+
+
+
+a.navbar-item:hover{
+    background: transparent;
+
+}
+
+
+
+#top{
+    background-color: #55c4f1;
+    background-image: url("../assets/img/bg.png");
+    background-size: cover;
+}
+a.navbar-item:hover span:after {
+    content: ' ';
+    width: 100%;
+    height: 2px;
+    background: #3273dc;
+    display: block;
+    margin-top: 1px;
+    float: left;
+}
+div#work-bg {
+    display: flex;
+    padding: 0 15px;
+    width: 100%;
+    align-items: flex-start;
+    margin-top: -94px;
+}
+/************* medias  ************/
+@media only screen and (min-width: 1280px) {
+    .container {
+        max-width: 1200px;
+        width: 1200px;
+    }
+}
+/*****  helpers *****************/
+.color-primary {
+    color: #fff;
+}
+
+.hov-secondary:hover {
+    color: #12698d  ;
+}
+
+.semibold {
+    font-weight: 600;
+}
+
+.h100 {
+    height: 100px;
+}
+.h50{
+    height: 50px;
+}
+.h130 {
+    height: 130px;
+}
+
+.sz15 {
+font-size: 15px;
+}
+.sz35 {
+font-size: 35px;
+}
+
+.sz18 {
+font-size: 18px;
+}
+
+.h25 {
+    height:25px;
+}

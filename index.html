@@ -6,63 +6,64 @@
 	<link href="https://fonts.googleapis.com/css?family=Open+Sans:300,400,600,700" rel="stylesheet">
 	<link rel="stylesheet" href="css/normalize.css">
 	<link rel="stylesheet" href="css/bulma.css">
+	<link rel="stylesheet" href="css/iconmoon.css">
 	<link rel="stylesheet" href="css/animate.css">
+	<link rel="stylesheet" href="plugins/lightbox/css/lightbox.min.css">
 	<link rel="stylesheet" href="css/style.css">
 
 </head>
 <body class="gatoprin">
 	<section id="top" >
-	<nav>
-		<div class="container">
-			<nav class="navbar" role="navigation" aria-label="main navigation">
-				<div class="navbar-brand">
-					<a class="navbar-item" href="#top" alt="Inicio">
-						<img src="assets/img/logo.png" width="240" height="49" alt="Logo gatoprin">
-					</a>
-
-					<a role="button" class="navbar-burger" aria-label="menu" aria-expanded="false">
-						<span aria-hidden="true"></span>
-						<span aria-hidden="true"></span>
-						<span aria-hidden="true"></span>
-					</a>
-				</div>
-				<div id="navMenuDocumentation" class="navbar-menu">
-					<div class="navbar-end">
-						<a class="navbar-item font-primary semibold sz15 color-primary hov-secondary" href="#services">
-							<span class="is-hidden-touch is-hidden-widescreen">
-								SERVICIOS
-							</span>
-							<span class="is-hidden-desktop-only">
-								SERVICIOS
-							</span>
-							<span class="line-hover"></span>
+		<nav id="menu">
+			<div class="container">
+				<nav  class="navbar" role="navigation" aria-label="main navigation">
+					<div class="navbar-brand">
+						<a class="navbar-item scrollGo" href="#top" alt="Inicio" to="top">
+							<img src="assets/img/logo.png" width="240" height="49" alt="Logo gatoprin">
 						</a>
 
-
-						<a class="navbar-item font-primary semibold sz15 color-primary hov-secondary" href="#">
-							<span class="is-hidden-touch is-hidden-widescreen">
-								EMPRESA
-							</span>
-
-							<span class="is-hidden-desktop-only">EMPRESA</span>
-						</a>
-
-						<a class="navbar-item font-primary semibold sz15 color-primary hov-secondary" href="#contacto">
-							<span class="is-hidden-touch is-hidden-widescreen">
-								CONTACTO
-							</span>
-							<span class="is-hidden-desktop-only">CONTACTO</span>
-						</a>
-
-						<a class="navbar-item ws-logo-link" href="https://api.whatsapp.com/send?phone=528712199612" alt="WhatsApp (871) 219 9612" target="_blank">
-							<img src="assets/img/ws.png" width="31" height="31" alt="link a whats app">
+						<a role="button" class="navbar-burger color-primary" aria-label="menu" aria-expanded="false">
+							<span aria-hidden="true"></span>
+							<span aria-hidden="true"></span>
+							<span aria-hidden="true"></span>
 						</a>
 					</div>
-				</div>
-			</nav>
-		</div>
-	</nav>
-	<div>
+					<div id="navMenuDocumentation" class="navbar-menu">
+						<div class="navbar-end">
+							<a class="navbar-item font-primary semibold sz15 color-primary hov-secondary scrollGo" href="#services" to="services">
+								<span class="is-hidden-touch is-hidden-widescreen">
+									SERVICIOS
+								</span>
+								<span class="is-hidden-desktop-only">
+									SERVICIOS
+								</span>
+							</a>
+
+
+							<a class="navbar-item font-primary semibold sz15 color-primary hov-secondary" href="#">
+								<span class="is-hidden-touch is-hidden-widescreen">
+									EMPRESA
+								</span>
+
+								<span class="is-hidden-desktop-only">EMPRESA</span>
+							</a>
+
+							<a class="navbar-item font-primary semibold sz15 color-primary hov-secondary" href="#contacto">
+								<span class="is-hidden-touch is-hidden-widescreen">
+									CONTACTO
+								</span>
+								<span class="is-hidden-desktop-only">CONTACTO</span>
+							</a>
+
+							<a class="navbar-item ws-logo-link" href="https://api.whatsapp.com/send?phone=528712199612" alt="WhatsApp (871) 219 9612" target="_blank">
+								<img src="assets/img/ws.png" width="31" height="31" alt="link a whats app">
+							</a>
+						</div>
+					</div>
+				</nav>
+			</div>
+		</nav>
+		<div id="menuHeight"></div>
 		<div class="h100"></div>
 		<h1 class="animated fadeInUp has-text-centered"><span class="sz35 has-text-weight-bold is-centered color-primary">¡Hola, bienvenido!</span></h1>
 		<div class="h50"></div>
@@ -74,27 +75,67 @@
 			Conoce nuestros servicios...
 		</p>
 		<div class="h50"></div>
-		<div class="has-text-centered">
-			<a class="arrow-scroll-dawn" href="#services"
-			   alt="Ir Abajo" target="_blank">
-				<img src="assets/img/scroll.png" width="35" height="41" alt="arrows down">
-			</a>
-		</div>
-		<div class="cat-print-1 has-text-centered"><img src="assets/img/cat.png" width="610" height="398" alt="gato gatoprin"></div>
+		<div class="has-text-centered ico-scroll">
+			<a class="arrow-scroll-dawn scrollGo" href="#services" to="services"
+			alt="Ir Abajo" target="_blank">
+			<span class="adicon-arrow1 sz35"></span>
+		</a>
 	</div>
-	</section>
-	<section id="services" style="background: white">
-		<div class="container">
-			<div class="h130"></div>
-			<h2 class="has-text-centered"><span class="has-text-black has-text-weight-bold sz35">Experiencia y calidad en cada servicio</span></h2>
-			<div class="h100"></div>
-			<div class="servicios">
+	<div class="cat-print-1 has-text-centered"><span class="adicon-cat"><span class="path1"></span><span class="path2"></span><span class="path3"></span><span class="path4"></span><span class="path5"></span><span class="path6"></span><span class="path7"></span><span class="path8"></span><span class="path9"></span><span class="path10"></span><span class="path11"></span><span class="path12"></span><span class="path13"></span><span class="path14"></span><span class="path15"></span><span class="path16"></span><span class="path17"></span><span class="path18"></span><span class="path19"></span><span class="path20"></span><span class="path21"></span><span class="path22"></span><span class="path23"></span><span class="path24"></span><span class="path25"></span><span class="path26"></span>
+	</span></span></div>
+	
+</section>
+<section id="services" style="background: white">
+	<div class="container">
+		<div class="h130"></div>
+		<h2 class="has-text-centered"><span class="has-text-black has-text-weight-bold sz35">Experiencia y calidad en cada servicio</span></h2>
+		<div class="h100"></div>
+		<div class="servicios">
 
-
+			<div class="columns">
+			  <div class="column is-3 is-offset-1">
+			    <ul>
+			    	<li><a  href="http://lokeshdhakar.com/projects/lightbox2/images/image-3.jpg" data-lightbox="services" data-title="Doculor"><span class="icon adicon-doculor">
+                <span class="path1"></span><span class="path2"></span><span class="path3"></span><span class="path4"></span><span class="path5"></span><span class="path6"></span><span class="path7"></span><span class="path8"></span>
+                </span><span>Doculor</span></a></li>
+                <li><span class="icon adicon-vinil-rotulation">
+                <span class="path1"></span><span class="path2"></span><span class="path3"></span><span class="path4"></span><span class="path5"></span>
+                </span> <span>Vinil</span></li>
+                <li><span class="icon adicon-printing">
+                <span class="path1"></span><span class="path2"></span><span class="path3"></span><span class="path4"></span><span class="path5"></span><span class="path6"></span><span class="path7"></span><span class="path8"></span><span class="path9"></span><span class="path10"></span>
+                </span><span>imprenta</span></li>
+                <li><span class="icon adicon-letters">
+                <span class="path1"></span><span class="path2"></span><span class="path3"></span><span class="path4"></span><span class="path5"></span><span class="path6"></span>
+                </span><span>letras 3d</span></li>
+                <li><span class="icon adicon-promotionals">
+                <span class="path1"></span><span class="path2"></span><span class="path3"></span><span class="path4"></span>
+                </span><span>promocionales</span></li>
+                <li><span class="icon adicon-sublimation">
+                <span class="path1"></span><span class="path2"></span><span class="path3"></span>
+                </span><span>sublimacion</span></li>
+                <li><span class="icon adicon-needle">
+                <span class="path1"></span><span class="path2"></span><span class="path3"></span>
+                </span><span>bordados</span></li>
+                <li><span class="icon adicon-serigraphy">
+                <span class="path1"></span><span class="path2"></span>
+                </span><span>serigrafia</span></li>
+			    </ul>
+			  </div>
+			  <div class="column is-6">
+			    <video autoplay width="320" height="240">
+  <source src="assets/video/mov.mp4" type="video/mp4">
+Your browser does not support the video tag.
+</video>
+			  </div>
+			  <div class="column">
+			    Second column
+			  </div>
 			</div>
-			<div class="h130"></div>
+
 		</div>
-	</section>
+		<div class="h130"></div>
+	</div>
+</section>
 <section id="works">
 	<div class="container">
 		<h2><span class="has-text-weight-bold sz35 has-text-black">¡Calidad de la buena!</span></h2>
@@ -116,12 +157,22 @@
 			<br>
 			Cuidamos cada detalle y brindamos la mayor eficacia en cada proyecto.
 		</p>
-			Servicio
-			Calidad
+		Servicio
+		Calidad
 		Puntualidad
-			¡Comenzemos un nuevo proyecto!
+		¡Comenzemos un nuevo proyecto!
 	</div>
 </section>
+<section id="contact">
+	
+</section>
+<footer>
 
+
+	<!--End mc_embed_signup-->
+</footer>
+<script src="https://ajax.googleapis.com/ajax/libs/jquery/3.3.1/jquery.min.js"></script>
+<script src="plugins/lightbox/js/lightbox-plus-jquery.min.js"></script>
+<script src="js/script.js"></script>
 </body>
 </html>

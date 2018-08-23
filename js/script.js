@@ -14,6 +14,7 @@ $(document).ready(function () {
     logoBlack = 'assets/img/logo-black.png',
     header = $('#top'),
     animates = $('.animated'),
+    animates2 = $('.animate'),
     noScroll = 'noScroll',
     waitAnim = 'wait-animate',
     buttonPlay = $('#buttonPlay'),
@@ -36,6 +37,26 @@ $(document).ready(function () {
           el.removeClass(waitAnim);
         }
       }
+    });
+    animates2.each(function () {
+      var el = $(this);
+      var elemTop = el.offset().top;
+      var elemBottom = elemTop + el.height();
+      if (!el.hasClass('animated')) {
+        if (!((elemBottom < posButView && elemBottom > posTopView) || (elemTop > posTopView && elemTop < posButView))) {
+          //
+        } else {
+          el.addClass('animated');
+          el.addClass(waitAnim);
+          el.addClass('animating', 500);
+        }
+      } else {
+        if (el.hasClass('animating')) {
+            el.removeClass(waitAnim);
+            el.removeClass('animating');
+        }
+      }
+
     });
     if (posTopView > header.height() - 90) {
       nav.addClass(stickyDiv);

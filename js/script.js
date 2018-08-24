@@ -80,4 +80,77 @@ $(document).ready(function () {
       myVideo.pause();
     }
   });
+
+  var form = $('#mailForm'),
+        summary = $('#summary'),
+        name=$('#name'),
+        mail=$('#mail'),
+        message=$('#message');
+
+    // Success function
+    function doneFunction(response) {
+        summary.fadeIn().removeClass('is-hidden').removeClass('has-text-danger').addClass('has-text-success');
+        summary.text(response);
+        setTimeout(function () {
+            summary.fadeOut();
+        }, 5000);
+        form.find('input:not([type="submit"]), textarea').val('');
+    }
+
+    // fail function
+    function failFunctio(data) {
+        summary.fadeIn().removeClass('is-hidden').removeClass('has-text-success').addClass('has-text-danger');
+        summary.text(data.responseText + ' '+ data.statusText);
+        setTimeout(function () {
+            summary.fadeOut();
+        }, 5000);
+    }
+    function validateFunction() {
+    	if(validateElement(name)&&validateElement(mail,true)&&validateElement(message)){
+    		return true;
+    	} else{
+    		return false;
+    	}
+
+
+    }
+    function validateElement(el, isMail){
+    	if(el.val() === ""){
+    		summary.fadeIn().removeClass('is-hidden').removeClass('has-text-success').addClass('has-text-warning');
+        	summary.text(el.attr('placeholder')+' no debe estar vacio');
+	        setTimeout(function () {
+	            summary.fadeOut();
+	        }, 5000);
+	        return false
+    	}
+    	if(isMail){
+    		var re = /^(([^<>()\[\]\\.,;:\s@"]+(\.[^<>()\[\]\\.,;:\s@"]+)*)|(".+"))@((\[[0-9]{1,3}\.[0-9]{1,3}\.[0-9]{1,3}\.[0-9]{1,3}\])|(([a-zA-Z\-0-9]+\.)+[a-zA-Z]{2,}))$/;
+    		if(!re.test(String(el.val()).toLowerCase())){
+				summary.fadeIn().removeClass('is-hidden').removeClass('is-success').addClass('is-warning');
+        	summary.text(el.attr('placeholder')+' no es un email valido');
+	        setTimeout(function () {
+	            summary.fadeOut();
+	        }, 5000);
+	        return false
+    		}
+    	}
+    	return true;
+    }
+
+    
+    form.submit(function (e) {
+        e.preventDefault();
+        if(validateFunction()){
+        	formData = $(this).serialize();
+        console.log(formData);
+        $.ajax({
+            type: 'POST',
+            url: form.attr('action'),
+            data: formData
+        })
+        .done(doneFunction)
+        .fail(failFunctio);
+        }
+        
+    });
 });

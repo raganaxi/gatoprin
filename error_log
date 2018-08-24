@@ -1,0 +1,4 @@
+[24-Aug-2018 05:31:37 America/Chicago] PHP Fatal error:  Uncaught exception 'PHPMailer\PHPMailer\Exception' with message 'Message could not be sent. Mailer Error: Message body empty' in /home/yorchsco/gatoprin.com/mail.php:55
+Stack trace:
+#0 {main}
+  thrown in /home/yorchsco/gatoprin.com/mail.php on line 55

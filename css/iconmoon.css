@@ -24,6 +24,21 @@
   -moz-osx-font-smoothing: grayscale;
 }
 
+.adicon-instagram:before {
+  content: "\e949";
+}
+.adicon-facebook:before {
+  content: "\e94a";
+}
+.adicon-pointer:before {
+  content: "\e94b";
+}
+.adicon-mail:before {
+  content: "\e94c";
+}
+.adicon-phone:before {
+  content: "\e94d";
+}
 .adicon-cal:before {
   content: "\e900";
 }
@@ -369,4 +384,7 @@
 }
 .adicon-star:before {
   content: "\e948";
+}
+.adicon-location:before {
+  content: "\e94e";
 }

@@ -9,15 +9,40 @@ ul a span, ul li span {
     color: #2a2a29;
     line-height: 35px;
 }
+ul.white a span, ul.white li span {
+    font-size: 25px;
+    color: #fff;
+    line-height: 25px;
+}
 
 ul li {
     margin-bottom: 15px;
 }
 
+footer ul li {
+    margin-bottom: 5px;
+}
+footer .column.flex{
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+footer .flex-wrap{
+        display: flex;
+    flex-wrap: wrap;
+    justify-content: space-around;
+    width: 70px;
+    margin: 0 auto;
+    justify-items: center;
+    align-items: center;
+}
 ul li .icon {
     margin-right: 18px;
 }
-
+.icon.icon-li-large {
+    margin-bottom: 70px;
+    float: left;
+}
 .gatoprin .navbar-item img {
     max-height: 49px;
 }
@@ -92,14 +117,14 @@ div#work-bg {
 #bgVideo {
     width: 574px;
     height: 492px;
-    background: #fff url('../assets/img/bg-video.png');
+    background: #fff url('../assets/img/bg-video.png') center;
     background-size:  cover;
     margin: 0 auto;
 }
 #coverVideo {
     width: 418px;
     height: 419px;
-    background: url('../assets/img/cover-video.png');
+    background: url('../assets/img/cover-video.png') center;
     background-size:  cover;
     margin: 0 auto;
 }
@@ -119,6 +144,7 @@ div#work-bg {
     width: 25%;
     background-image: url('../assets/img/play.png');
     background-size: cover;
+    background-position: center;
     height: 25%;
     position: absolute;
     top: 28%;
@@ -135,6 +161,74 @@ div#work-bg {
     cursor: pointer;
     background-image: url('../assets/img/play-hover.png');
 }
+
+#iconServicio {
+    font-size: 71px;
+    margin: -3px auto 0;
+    width: 64px;
+    height: 64px;
+    display: block;
+}
+#iconCalidad {
+    font-size: 78px;
+    margin: -2px auto 0;
+    width: 64px;
+    height: 64px;
+    display: block;
+}
+#iconPuntualidad{
+    font-size: 71px;
+    margin: -3px auto 0;
+    width: 64px;
+    height: 64px;
+    display: block;
+}
+
+.input, .textarea {
+    color: #c7c7c7;
+    border: none;
+    box-shadow:  none;
+}
+.input:focus, .textarea:focus {
+    color: #12698d;
+    border: none;
+    box-shadow: 0px 0px 12px 0px #fff;
+    -webkit-box-shadow: 0px 0px 12px 0px #fff;
+    -moz-box-shadow: 0px 0px 12px 0px #fff;
+}
+
+.input.is-rounded, .textarea.is-rounded, .button.is-rounded{
+    border-radius: 10px;
+}
+::-webkit-input-placeholder { /* Chrome/Opera/Safari */
+  color: #83d1f4 !important;
+}
+::-moz-placeholder { /* Firefox 19+ */
+  color: #83d1f4;
+}
+:-ms-input-placeholder { /* IE 10+ */
+  color: #83d1f4;
+}
+:-moz-placeholder { /* Firefox 18- */
+  color: #83d1f4;
+}
+
+.button:hover {
+    background: #12698d;
+    color: #fff;
+}
+
+.button {
+    background: #81C4E4;
+    color: #fff;
+    border: none;
+    box-shadow:  none;
+}
+.field:not(:last-child) {
+    margin-bottom: 25px;
+}
+
+
 
 section#contact {
     min-height: 500px;
@@ -168,9 +262,126 @@ footer#footer {
         margin-left: 6.33%;
     }
 }
+@media only screen and (max-width: 1279px) {
+    ul a span, ul li span {
+    font-size: 22px;
+    line-height: 22px;
+}
+}
+@media only screen and (max-width: 1087px) {
+    #works, footer{
+        padding: 0 30px;
+    }
+    ul.white a span, ul.white li span{
+        line-height: 18px;
+        font-size: 18px;
+    }
+}
+@media only screen and (max-width: 900px) {
+    .cat-print-1 span.adicon-cat {
+    font-size: 200px;
+    padding-left: 50px;
+}
+}
+
+@media only screen and (max-width: 900px) {
+    
+}
+@media only screen and (max-width: 767px) {
+    #bgVideo {
+    width: 100%;
+    height: auto;
+}
+div#coverVideo{
+    width: 100%;
+}
+ul {
+    margin-left: 33px;
+}
+div#work-bg {
+    display: block;
+    margin-top: 22px;
+}
+div#catContact {
+    position: static;
+}
+
+section#contact {
+    margin-top: 0;
+    padding: 30px;
+}
+#footer {
+    padding: 30px;
+}
+#contact h2 {
+    margin-bottom: 30px;
+}
+
+}
+@media only screen and (max-width: 480px) {
+    #bgVideo {
+    width: 100%;
+    height: auto;
+}
+div#coverVideo{
+    width: 100%;
+}
+ul {
+    margin-left: 33px;
+}
+    
+    div#work-bg {
+    display: block;
+    margin-top: 22px;
+}
+div#catContact {
+    position: static;
+}
+
+section#contact {
+    margin-top: 0;
+    padding: 30px;
+}
+#contact h2 {
+    margin-bottom: 30px;
+}
+
+#contact h2 span {
+    font-size: 25px;
+}
+#footer {
+    padding: 30px;
+}
+}
+
+
 /*****  helpers *****************/
+.flex-column {
+        display: flex;
+    flex-direction: column;
+    justify-content: space-between;
+}
+
 .color-primary {
     color: #fff;
+}
+.color-secondary{
+    color: #55c4f1;
+}
+
+.color-third{
+    color: #e35e9d;
+}
+
+.color-four{
+    color: #f4d64e;
+}
+.color-five{
+    color: #12698d;
+}
+
+.color-six{
+    color: #2a2929;
 }
 
 .hov-primary,.hov-secondary,.hov-third,.hov-four,.hov-five,
@@ -198,7 +409,9 @@ a.hov-primary span,a.hov-secondary span,a.hov-third span,a.hov-four span,a.hov-f
 .hov-five:hover, a.hov-five:hover span {
     color: #2a2929;
 }
-
+.lineheight{
+    line-height: 120% !important;
+}
 .h25 {
     height: 25px;
 }
@@ -219,9 +432,11 @@ height: 50px;
     height: 140px;
 }
 .sz15 {
-    font-size: 15px;
+    font-size: 15px !important;
 }
-
+.sz20 {
+    font-size: 20px;
+}
 .sz35 {
     font-size: 35px;
 }

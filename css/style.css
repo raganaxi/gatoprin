@@ -86,6 +86,34 @@ a.navbar-item:hover {
     background: transparent;
 
 }
+.navbar-menu.is-active {
+    background: #55c4f1;
+    box-shadow: none;
+}
+
+.columns {
+    box-sizing: content-box;
+    width: 100%;
+}
+
+a.navbar-item, .navbar-link {
+    text-align: center;
+}
+
+.navbar-burger:hover {
+    background-color: transparent;
+    color: #fff;
+}
+
+.sticky .navbar-menu.is-active {
+    background: #fff6;
+}
+
+.sticky .navbar-burger {
+    color: #000;
+}
+
+
 
 #top {
     background-color: #55c4f1;
@@ -277,7 +305,16 @@ footer#footer {
         font-size: 18px;
     }
 }
+@media only screen and (max-width: 1087px) {
+    #navMenuD {
+        -webkit-backface-visibility: visible !important;
+        backface-visibility: visible !important;
+        -webkit-animation-name: flipInY;
+        animation-name: flipInY;
+    }
+}
 @media only screen and (max-width: 900px) {
+
     .cat-print-1 span.adicon-cat {
     font-size: 200px;
     padding-left: 50px;

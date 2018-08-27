@@ -8,7 +8,7 @@ require 'vendor/autoload.php';
 
 if ($_SERVER["REQUEST_METHOD"] != "POST") {
    header("HTTP/1.1 405 Method not allowed");
-    echo 'Message could not be sent.' ;
+    echo 'Mensaje no pudo ser enviado.' ;
         die();
 }
 // Variables
@@ -27,7 +27,7 @@ $title = 'Gatoprin - Contacto';
 $message  = "";
 $message .= "Nombre: " . $name . "\r\n <br />";
 $message .= "Correo: " . $mail . "\r\n <br />";
-$message .= "Pregunta: " . $msg . "\r\n <br />";
+$message .= "Mensaje: " . $msg . "\r\n <br />";
 
 
 $mail = new PHPMailer(true);                              // Passing `true` enables exceptions
@@ -55,9 +55,9 @@ try {
     $mail->AltBody = $message;
 
     $mail->send();
-    echo 'Message has been sent: '.$message;
+    echo 'El mensaje ha sido enviado. ';
 } catch (Exception $e) {
     header("HTTP/1.1 500 ERROR");
-    echo 'Message could not be sent. Mailer Error: '. $mail->ErrorInfo;
+    echo 'El mensaje no pudo ser enviado. Mailer Error: '. $mail->ErrorInfo;
 	
 }

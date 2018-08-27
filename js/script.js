@@ -153,4 +153,12 @@ $(document).ready(function () {
         }
         
     });
+
+  var $burgers = $('.navbar-burger');
+  $burgers.on('click', function () {
+    $(".navbar-burger").toggleClass("is-active");
+    $(".navbar-menu").toggleClass("is-active");
+  });
+
+
 });

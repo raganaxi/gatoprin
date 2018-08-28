@@ -255,6 +255,10 @@ div#catContact {
 footer#footer {
     background: #2a2929;
 }
+
+.slidesjs-pagination{
+ display: none;
+}
 /************* medias  ************/
 @media only screen and (min-width: 1280px) {
     .container {

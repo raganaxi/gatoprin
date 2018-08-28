@@ -1,4 +1,21 @@
 $(document).ready(function () {
+	/*$(".lazy").slick({
+        vertical: true,
+        infinite: true,
+        speed: 500,
+        autoplay: true
+      });*/
+      $('.slides').slidesjs({
+        width: 940,
+        height: 300,
+        play:{
+        	auto:true,
+        	effect:'fade',
+        	interval: 2000,
+        },
+        navigation: false
+      });
+
   $(".scrollGo").click(function (event) {
     event.preventDefault();
     var to = $(this).attr("to");

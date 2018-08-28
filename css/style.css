@@ -149,12 +149,17 @@ div#work-bg {
     background-size:  cover;
     margin: 0 auto;
 }
-#coverVideo {
+#coverVideo{
+    background: transparent;
     width: 418px;
     height: 419px;
+    margin: 0 auto;
+}
+#coverVideo.stop {
+    
     background: url('../assets/img/cover-video.png') center;
     background-size:  cover;
-    margin: 0 auto;
+    
 }
 #coverVideo.stop #video{
     opacity: 0;
@@ -321,24 +326,43 @@ footer#footer {
 }
 }
 
-@media only screen and (max-width: 900px) {
-    
+@media only screen and (max-width: 800px) {
+    #bgVideo {
+    width: 100%;
+    height: auto;
+}
+div#coverVideo{
+    width: 480px;
+}
+ul {
+    margin-left: 25%;
+}
+#buttonPlay {
+    width: 100px;
+    height: 100px;
+    left: 42%;
+    top: 43%;
+}
+#video {
+    width: 480px;
+    margin: 0 auto;
+    display: block;
+}
+div#work-bg {
+    display: block;
+    margin-top: 22px;
+}
 }
 @media only screen and (max-width: 767px) {
     #bgVideo {
     width: 100%;
     height: auto;
 }
-div#coverVideo{
-    width: 100%;
-}
+
 ul {
     margin-left: 33px;
 }
-div#work-bg {
-    display: block;
-    margin-top: 22px;
-}
+
 div#catContact {
     position: static;
 }
@@ -361,7 +385,10 @@ section#contact {
     height: auto;
 }
 div#coverVideo{
-    width: 100%;
+    width: 320px;
+}
+#video {
+    width: 320px;
 }
 ul {
     margin-left: 33px;

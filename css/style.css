@@ -418,6 +418,10 @@ section#contact {
 }
 }
 
+#companyIcons {
+    width: 700px;
+    margin: 0 auto;
+}
 
 /*****  helpers *****************/
 .flex-column {
@@ -596,4 +600,3 @@ height: 50px;
     -webkit-animation-name: unset;
     animation-name: unset;
 }
-

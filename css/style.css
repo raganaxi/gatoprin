@@ -28,7 +28,7 @@ footer .column.flex{
     align-items: center;
 }
 footer .flex-wrap{
-        display: flex;
+    display: flex;
     flex-wrap: wrap;
     justify-content: space-around;
     width: 70px;
@@ -156,10 +156,10 @@ div#work-bg {
     margin: 0 auto;
 }
 #coverVideo.stop {
-    
+
     background: url('../assets/img/cover-video.png') center;
     background-size:  cover;
-    
+
 }
 #coverVideo.stop #video{
     opacity: 0;
@@ -234,16 +234,16 @@ div#work-bg {
     border-radius: 10px;
 }
 ::-webkit-input-placeholder { /* Chrome/Opera/Safari */
-  color: #83d1f4 !important;
+    color: #83d1f4 !important;
 }
 ::-moz-placeholder { /* Firefox 19+ */
-  color: #83d1f4;
+    color: #83d1f4;
 }
 :-ms-input-placeholder { /* IE 10+ */
-  color: #83d1f4;
+    color: #83d1f4;
 }
 :-moz-placeholder { /* Firefox 18- */
-  color: #83d1f4;
+    color: #83d1f4;
 }
 
 .button:hover {
@@ -285,7 +285,26 @@ footer#footer {
 }
 
 .slidesjs-pagination{
- display: none;
+    display: none;
+}
+#companyIcons {
+    width: 700px;
+    margin: 0 auto;
+}
+.slidesjs-control a {
+    animation: fadeIn;
+    animation-iteration-count:  1;
+    animation-duration: 1s;
+}
+.slidesjs-control, .slidesjs-container {
+    min-height: 300px;
+}
+#slides2 .slidesjs-control,
+#slides2 .slidesjs-container,
+#slides3 .slidesjs-control,
+#slides3 .slidesjs-container
+{
+    min-height: 400px;
 }
 /************* medias  ************/
 @media only screen and (min-width: 1280px) {
@@ -301,9 +320,9 @@ footer#footer {
 }
 @media only screen and (max-width: 1279px) {
     ul a span, ul li span {
-    font-size: 22px;
-    line-height: 22px;
-}
+        font-size: 22px;
+        line-height: 22px;
+    }
 }
 @media only screen and (max-width: 1087px) {
     #works, footer{
@@ -325,111 +344,119 @@ footer#footer {
 @media only screen and (max-width: 900px) {
 
     .cat-print-1 span.adicon-cat {
-    font-size: 200px;
-    padding-left: 50px;
-}
+        font-size: 200px;
+        padding-left: 50px;
+    }
 }
 
 @media only screen and (max-width: 800px) {
     #bgVideo {
-    width: 100%;
-    height: auto;
-}
-div#coverVideo{
-    width: 480px;
-}
-ul {
-    margin-left: 25%;
-}
-#buttonPlay {
-    width: 100px;
-    height: 100px;
-    left: 42%;
-    top: 43%;
-}
-#video {
-    width: 480px;
-    margin: 0 auto;
-    display: block;
-}
-div#work-bg {
-    display: block;
-    margin-top: 22px;
-}
+        width: 100%;
+        height: auto;
+    }
+    #companyIcons {
+        width: 480px;
+    }
+    div#coverVideo{
+        width: 480px;
+    }
+    ul {
+        margin-left: 25%;
+    }
+    #buttonPlay {
+        width: 100px;
+        height: 100px;
+        left: 42%;
+        top: 43%;
+    }
+    #video {
+        width: 480px;
+        margin: 0 auto;
+        display: block;
+    }
+    div#work-bg {
+        display: block;
+        margin-top: 22px;
+    }
 }
 @media only screen and (max-width: 767px) {
     #bgVideo {
-    width: 100%;
-    height: auto;
-}
+        width: 100%;
+        height: auto;
+    }
 
-ul {
-    margin-left: 33px;
-}
+    ul {
+        margin-left: 33px;
+    }
 
-div#catContact {
-    position: static;
-}
+    div#catContact {
+        position: static;
+    }
 
-section#contact {
-    margin-top: 0;
-    padding: 30px;
-}
-#footer {
-    padding: 30px;
-}
-#contact h2 {
-    margin-bottom: 30px;
-}
-
+    section#contact {
+        margin-top: 0;
+        padding: 30px;
+    }
+    #footer {
+        padding: 30px;
+    }
+    #contact h2 {
+        margin-bottom: 30px;
+    }
+    #companyIcons {
+        width: 100%;
+    }
+    #companyIcons .columns {
+        display: flex;
+    }
 }
 @media only screen and (max-width: 480px) {
     #bgVideo {
-    width: 100%;
-    height: auto;
-}
-div#coverVideo{
-    width: 320px;
-}
-#video {
-    width: 320px;
-}
-ul {
-    margin-left: 33px;
-}
-    
+        width: 100%;
+        height: auto;
+    }
+    div#coverVideo{
+        width: 320px;
+    }
+    #video {
+        width: 320px;
+    }
+    ul {
+        margin-left: 33px;
+    }
+
     div#work-bg {
-    display: block;
-    margin-top: 22px;
-}
-div#catContact {
-    position: static;
+        display: block;
+        margin-top: 22px;
+    }
+    div#catContact {
+        position: static;
+    }
+
+    section#contact {
+        margin-top: 0;
+        padding: 30px;
+    }
+    #contact h2 {
+        margin-bottom: 30px;
+    }
+
+    #contact h2 span {
+        font-size: 25px;
+    }
+    #footer {
+        padding: 30px;
+    }
+    #companyIcons .columns {
+        display: block;
+    }
 }
 
-section#contact {
-    margin-top: 0;
-    padding: 30px;
-}
-#contact h2 {
-    margin-bottom: 30px;
-}
 
-#contact h2 span {
-    font-size: 25px;
-}
-#footer {
-    padding: 30px;
-}
-}
-
-#companyIcons {
-    width: 700px;
-    margin: 0 auto;
-}
 
 /*****  helpers *****************/
 .flex-column {
-        display: flex;
+    display: flex;
     flex-direction: column;
     justify-content: space-between;
 }
@@ -489,7 +516,7 @@ a.hov-primary span,a.hov-secondary span,a.hov-third span,a.hov-four span,a.hov-f
 }
 
 .h50 {
-height: 50px;
+    height: 50px;
 }
 
 .h100 {

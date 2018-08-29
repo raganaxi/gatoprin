@@ -538,9 +538,6 @@ a.hov-primary span, a.hov-secondary span, a.hov-third span, a.hov-four span, a.h
 }
 
 @media only screen and (min-width: 900px) {
-    .is-hidden-desktop-only {
-        display: none;
-    }
     #slides1 {
         position: absolute;
         width: 300px;

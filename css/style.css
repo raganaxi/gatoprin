@@ -306,16 +306,78 @@ footer#footer {
 {
     min-height: 400px;
 }
+#company {
+    background: url('../assets/img/bg-company.png') center;
+    background-size: cover;
+}
 /************* medias  ************/
+
+
+@media only screen and (min-width: 769px) {
+    .offset1 {
+        margin-left: 6.33%;
+    }
+
+
+}
+@media only screen and (min-width: 900px) {
+
+    #slides1 {
+        position: absolute;
+        width: 300px;
+        left: 0;
+        bottom: 0;
+        z-index: 2;
+    }
+
+    #slides {
+        position: relative;
+        min-height: 512px;
+    }
+
+    #slides2 {
+        position: absolute;
+        width: 400px;
+        left: 111px;
+        z-index: 1;
+        top: 0;
+    }
+
+    #slides3 {
+        position: absolute;
+        width: 400px;
+        bottom: 0;
+        right: 184px;
+        z-index: 3;
+    }
+
+    #slides4 {
+        position: absolute;
+        top: 0;
+        right: 0;
+        width: 300px;
+        z-index: 4;
+    }
+}
 @media only screen and (min-width: 1280px) {
     .container {
         max-width: 1200px;
         width: 1200px;
     }
-}
-@media only screen and (min-width: 769px) {
-    .offset1 {
-        margin-left: 6.33%;
+    #slides2 {
+        position: absolute;
+        width: 400px;
+        left: 143px;
+        z-index: 1;
+        top: 0;
+    }
+
+    #slides3 {
+        position: absolute;
+        width: 400px;
+        bottom: 0;
+        right: 168px;
+        z-index: 3;
     }
 }
 @media only screen and (max-width: 1279px) {

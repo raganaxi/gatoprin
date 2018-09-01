@@ -40,7 +40,9 @@ footer .flex-wrap {
     justify-items: center;
     align-items: center;
 }
-
+.min-container{
+    margin: 0 auto;
+}
 ul li .icon {
     margin-right: 18px;
 }
@@ -79,14 +81,16 @@ nav.navbar {
     position: absolute;
     top: 0;
     width: 100%;
+    margin-top: 40px;
 }
 
 #menu.sticky {
     position: fixed;
     top: 0;
-    background: #ffffffb5;
+    background: #ffffffbf;
     z-index: 1;
     border-bottom: 1px solid #fff;
+    margin-top: 0;
 }
 
 .sticky .color-primary {
@@ -127,7 +131,7 @@ a.navbar-item, .navbar-link {
 
 #top {
     background-color: #55c4f1;
-    background-image: url("../assets/img/bg.png");
+    background: url("../assets/img/bg.png") center center;
     background-size: cover;
 }
 
@@ -139,8 +143,8 @@ a.navbar-item:hover span:after {
     display: block;
     margin-top: 1px;
     float: left;
-    -webkit-animation: zoomInDown 0.6s ease alternate;
-    animation: zoomInDown 0.6s ease alternate;
+    -webkit-animation: zoomInDown 0.3s cubic-bezier(0.25, 0.46, 0.57, 1.18);
+    animation: zoomInDown 0.3s cubic-bezier(0.25, 0.46, 0.57, 1.18);
     -webkit-animation-iteration-count: 1;
     animation-iteration-count: 1;
 }
@@ -220,20 +224,26 @@ div#work-bg {
     display: block;
 }
 
+.adicon-hands:before{
+    margin-left: -24px;
+}
+
 #iconCalidad {
     font-size: 78px;
-    margin: -2px auto 0;
+    margin: -10px auto 0;
     width: 64px;
     height: 64px;
     display: block;
+    margin-bottom: 7px;
 }
 
 #iconPuntualidad {
     font-size: 71px;
-    margin: -3px auto 0;
+    margin: -10px auto 0;
     width: 64px;
     height: 64px;
     display: block;
+    margin-bottom: 4px;
 }
 
 .input, .textarea {
@@ -290,19 +300,22 @@ div#work-bg {
 section#contact {
     min-height: 500px;
     position: relative;
+    background: url(../assets/img/bg.png) center center;
     background-color: #55c4f1;
-    background-image: url(../assets/img/bg.png);
+    
     background-size: cover;
 }
 
+
 #catContact {
-    margin: 0 auto;
-    display: block;
-    width: 179px;
+    width: 100%;
     top: -90px;
     position: absolute;
 }
-
+#catContact img{
+margin: 0 auto;
+display: block;
+}
 footer#footer {
     background: #2a2929;
 }
@@ -338,6 +351,7 @@ footer#footer {
     background-size: cover;
     padding-bottom: 90px;
 }
+
 
 
 /*****  helpers *****************/
@@ -400,7 +414,9 @@ a.hov-primary span, a.hov-secondary span, a.hov-third span, a.hov-four span, a.h
 .lineheight {
     line-height: 120% !important;
 }
-
+.h10 {
+    height: 10px;
+}
 .h25 {
     height: 25px;
 }
@@ -449,10 +465,62 @@ a.hov-primary span, a.hov-secondary span, a.hov-third span, a.hov-four span, a.h
 }
 
 .ico-scroll {
-    -webkit-animation: movescroll 1s ease alternate;
-    animation: movescroll 1s ease alternate;
-    -webkit-animation-iteration-count: infinite;
-    animation-iteration-count: infinite;
+    position: relative;
+}
+
+
+body .arrows {
+  position: relative;
+  /**/
+  position: absolute;
+  top: 50%;
+  left: 50%;
+  /**/
+  width: 25px;
+  height: 25px;
+  transform: translate(-50%, -50%);
+}
+body .arrows:before {
+  content: '';
+  position: absolute;
+  width: 100%;
+  height: 100%;
+  border-left: 2.2727272727px solid rgba(255, 255, 255, 0.7);
+  border-bottom: 2.2727272727px solid rgba(255, 255, 255, 0.7);
+  transform: translate(8.3333333333px, 33.3333333333px) rotate(-45deg);
+  animation: arrows 3s linear infinite;
+}
+body .arrows:after {
+  content: '';
+  position: absolute;
+  width: 100%;
+  height: 100%;
+  border-left: 3.125px solid rgba(255, 255, 255, 0.7);
+  border-bottom: 3.125px solid rgba(255, 255, 255, 0.7);
+  transform: translate(16.6666666667px, 0px) rotate(-45deg);
+  animation: arrows 3s linear infinite -1.5s;
+}
+
+@keyframes arrows {
+  0% {
+    border-left: 3.125px solid rgba(255, 255, 255, 0);
+    border-bottom: 3.125px solid rgba(255, 255, 255, 0);
+    transform: translate(-4.1666666667px, -16.6666666667px) rotate(-45deg);
+  }
+  10%, 90% {
+    border-left: 3.125px solid rgba(255, 255, 255, 0);
+    border-bottom: 3.125px solid rgba(255, 255, 255, 0);
+  }
+  50% {
+    border-left: 3.125px solid rgba(255, 255, 255, 0.7);
+    border-bottom: 3.125px solid rgba(255, 255, 255, 0.7);
+    transform: translate(-4.1666666667px, 0px) rotate(-45deg);
+  }
+  100% {
+    border-left: 3.125px solid rgba(255, 255, 255, 0);
+    border-bottom: 3.125px solid rgba(255, 255, 255, 0);
+    transform: translate(-4.1666666667px, 16.6666666667px) rotate(-45deg);
+  }
 }
 
 @-webkit-keyframes colorScroll {
@@ -524,7 +592,9 @@ a.hov-primary span, a.hov-secondary span, a.hov-third span, a.hov-four span, a.h
     -webkit-animation-name: unset;
     animation-name: unset;
 }
-
+.columns{
+    margin: 0;
+}
 
 /************* medias  ************/
 
@@ -532,12 +602,19 @@ a.hov-primary span, a.hov-secondary span, a.hov-third span, a.hov-four span, a.h
     .offset1 {
         margin-left: 6.33%;
     }
-    #catContact{
-        left: 39% ;
-    }
+    .column.is-6.flex-column {
+    flex: auto;
+}
+.min-container {
+    width: 625px;
+}
 }
 
 @media only screen and (min-width: 900px) {
+    .min-container{
+        width: 880px;
+        max-width: 880px;
+    }
     #slides1 {
         position: absolute;
         width: 300px;
@@ -607,13 +684,16 @@ a.hov-primary span, a.hov-secondary span, a.hov-third span, a.hov-four span, a.h
 }
 
 @media only screen and (max-width: 1087px) {
-    #works, footer {
+    #works {
         padding: 0 30px;
     }
 
     ul.white a span, ul.white li span {
         line-height: 18px;
         font-size: 18px;
+    }
+    #menu {
+        margin-top: 0;
     }
 }
 
@@ -655,6 +735,9 @@ a.hov-primary span, a.hov-secondary span, a.hov-third span, a.hov-four span, a.h
     ul {
         margin-left: 25%;
     }
+    ul.white {
+    margin-left: 0;
+}
 
     #buttonPlay {
         width: 100px;
@@ -731,7 +814,9 @@ a.hov-primary span, a.hov-secondary span, a.hov-third span, a.hov-four span, a.h
     ul {
         margin-left: 33px;
     }
-
+    ul.white {
+        margin: 0;
+    }
     div#work-bg {
         display: block;
         margin-top: 22px;

@@ -1,17 +1,21 @@
 $(document).ready(function () {
-	/*$(".lazy").slick({
-        vertical: true,
-        infinite: true,
-        speed: 500,
-        autoplay: true
-      });*/
-      $('.slides').slidesjs({
+      $('.slides.circle').slidesjs({
         width: 940,
         height: 300,
         play:{
         	auto:true,
         	effect:'fade',
         	interval: 2000,
+        },
+        navigation: false
+      });
+      $('.slides.square').slidesjs({
+        width: 940,
+        height: 300,
+        play:{
+          auto:true,
+          effect:'fade',
+          interval: 2200,
         },
         navigation: false
       });
@@ -106,7 +110,7 @@ $(document).ready(function () {
 
     // Success function
     function doneFunction(response) {
-        summary.fadeIn().removeClass('is-hidden').removeClass('has-text-danger').addClass('has-text-success');
+        summary.fadeIn().removeClass('is-hidden');
         summary.text(response);
         setTimeout(function () {
             summary.fadeOut();
@@ -116,7 +120,7 @@ $(document).ready(function () {
 
     // fail function
     function failFunctio(data) {
-        summary.fadeIn().removeClass('is-hidden').removeClass('has-text-success').addClass('has-text-danger');
+        summary.fadeIn().removeClass('is-hidden');
         summary.text(data.responseText + ' '+ data.statusText);
         setTimeout(function () {
             summary.fadeOut();
@@ -133,7 +137,7 @@ $(document).ready(function () {
     }
     function validateElement(el, isMail){
     	if(el.val() === ""){
-    		summary.fadeIn().removeClass('is-hidden').removeClass('has-text-success').addClass('has-text-warning');
+    		summary.fadeIn().removeClass('is-hidden');
         	summary.text(el.attr('placeholder')+' no debe estar vacio');
 	        setTimeout(function () {
 	            summary.fadeOut();

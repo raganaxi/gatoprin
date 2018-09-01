@@ -9,8 +9,11 @@ ul a span, ul li span {
     font-size: 35px;
     color: #2a2a29;
     line-height: 35px;
+    vertical-align: middle;
 }
-
+.flashy-close {
+    z-index: 33;
+}
 ul.white a span, ul.white li span {
     font-size: 25px;
     color: #fff;
@@ -158,8 +161,8 @@ div#work-bg {
 }
 
 #bgVideo {
-    width: 574px;
-    height: 492px;
+    width: 440px;
+    height: 377px;
     background: #fff url('../assets/img/bg-video.png') center;
     background-size: cover;
     margin: 0 auto;
@@ -167,8 +170,8 @@ div#work-bg {
 
 #coverVideo {
     background: transparent;
-    width: 418px;
-    height: 419px;
+    width: 355px;
+    height: 370px;
     margin: 0 auto;
 }
 
@@ -182,17 +185,43 @@ div#work-bg {
 #coverVideo.stop #video {
     opacity: 0;
 }
-
-#video {
-    margin-top: 19px;
-    -webkit-border-radius: 8%;
-    -moz-border-radius: 8%;
-    border-radius: 5%;
-    width: 87%;
-    margin-left: 23px;
+.flashy-overlay{
+    background-color: #2d2d2db8;
+}
+.flashy-container .flashy-content{
+    background: transparent;
 }
 
+.flashy-overlay .flashy-close, .flashy-overlay .flashy-title {
+    background-color: transparent;
+    color: #fff;
+    width: 36px;
+    height: 36px;
+    background-size: cover;
+}
 #buttonPlay {
+    position: absolute;
+    width: 100%;
+    left: 0;
+    top: 40%;
+    outline: none !important;
+    display: none;
+}
+#buttonPlay:before {
+    width: 83px;
+    background-image: url('../assets/img/play.png');
+    background-size: cover;
+    background-position: center;
+    height: 83px;
+    left: 36%;
+    -webkit-transition: backgound 2s ease-out;
+    transition: backgound 2s ease-out;
+    outline: none !important;
+    content: ' ';
+    display: block;
+    margin: 0 auto;
+}
+/*#buttonPlay {
     width: 25%;
     background-image: url('../assets/img/play.png');
     background-size: cover;
@@ -205,13 +234,14 @@ div#work-bg {
     display: none;
     -webkit-transition: backgound 2s ease-out;
     transition: backgound 2s ease-out;
-}
+    outline: none !important;
+}*/
 
 #coverVideo.stop #buttonPlay, #coverVideo.play:hover #buttonPlay {
     display: block;
 }
 
-#buttonPlay:hover {
+#buttonPlay:hover:before {
     cursor: pointer;
     background-image: url('../assets/img/play-hover.png');
 }
@@ -245,7 +275,20 @@ div#work-bg {
     display: block;
     margin-bottom: 4px;
 }
-
+#iconServicio, #iconPuntualidad, #iconCalidad {
+    position: relative;
+}
+#iconServicio:after, #iconPuntualidad:after, #iconCalidad:after {
+    background: url(../assets/img/bg-icon.png) center center;
+    content: ' ';
+    width: 162px;
+    height: 120px;
+    left: -74%;
+    top: -28px;
+    position: absolute;
+    background-size: cover;
+    z-index: -2;
+}
 .input, .textarea {
     color: #c7c7c7;
     border: none;
@@ -595,6 +638,12 @@ body .arrows:after {
 .columns{
     margin: 0;
 }
+.full-video {
+    width: 100%;
+    max-width: 84vh;
+    margin: 0 auto;
+    display:  block;
+}
 
 /************* medias  ************/
 
@@ -704,6 +753,14 @@ body .arrows:after {
         -webkit-animation-name: flipInY;
         animation-name: flipInY;
     }
+    #bgVideo {
+        width: 312px;
+        height: 267px;
+    }
+    #coverVideo {
+        width: 100%;
+        height: 287px;
+    }
 
 }
 
@@ -728,29 +785,12 @@ body .arrows:after {
         width: 480px;
     }
 
-    div#coverVideo {
-        width: 480px;
-    }
 
-    ul {
-        margin-left: 25%;
-    }
     ul.white {
     margin-left: 0;
 }
 
-    #buttonPlay {
-        width: 100px;
-        height: 100px;
-        left: 42%;
-        top: 43%;
-    }
 
-    #video {
-        width: 480px;
-        margin: 0 auto;
-        display: block;
-    }
 
     div#work-bg {
         display: block;
@@ -759,6 +799,13 @@ body .arrows:after {
 }
 
 @media only screen and (max-width: 768px) {
+    div#coverVideo {
+        width: 480px;
+    }
+    #companyIcons .column {
+        margin-bottom:  30px;
+    }
+
     #company {
         padding: 0 5px 90px;
     }
@@ -805,11 +852,10 @@ body .arrows:after {
 
     div#coverVideo {
         width: 320px;
+        max-width: 100%;
     }
 
-    #video {
-        width: 320px;
-    }
+
 
     ul {
         margin-left: 33px;

@@ -1,4 +1,5 @@
 $(document).ready(function () {
+
       $('.slides.circle').slidesjs({
         width: 940,
         height: 300,
@@ -39,7 +40,8 @@ $(document).ready(function () {
     noScroll = 'noScroll',
     waitAnim = 'wait-animate',
     buttonPlay = $('#buttonPlay'),
-   myVideo = document.getElementById("video"),
+    myVideo = document.getElementById("video"),
+    myVideo2 = document.getElementById("video"),
   coverVideo = $('#coverVideo');
 
   menuHeight.height(nav.height());
@@ -89,18 +91,11 @@ $(document).ready(function () {
       menuHeight.height(nav.height());
     }
   });
-  buttonPlay.on('click',function () {
-    if (myVideo.paused) {
-      myVideo.play();
-      coverVideo.removeClass('stop');
-      coverVideo.addClass('play');
-    }
-    else {
-      coverVideo.addClass('stop');
-      coverVideo.removeClass('play');
-      myVideo.pause();
-    }
+  $('.custom').flashy({
+    showClass: 'fx-fadeIn',
+    hideClass: 'fx-fadeOut'
   });
+
 
   var form = $('#mailForm'),
         summary = $('#summary'),
